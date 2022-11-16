@@ -46,7 +46,13 @@ float v2prev = 0;
 float eintegral = 0;
 
 ros::NodeHandle nh;
+/*
+speed_msg[0] == Front Right/wheel 0
+speed_msg[1] == Front left/wheel 1
+speed_msg[2] == rear right/wheel 2
+speed_msg[3] == rear left/wheel 3
 
+*/
 void messageCb( const std_msgs::Int16MultiArray& speed_msg){
   digitalWrite(13, HIGH-digitalRead(13));   // blink the led
 
@@ -65,8 +71,8 @@ ros::Subscriber<std_msgs::Int16MultiArray> sub("speed_msg", &messageCb );
 
 
 void setup() {
-nh.initNode();
-nh.subscribe(sub);  
+  nh.initNode();
+  nh.subscribe(sub);  
   Serial.begin(115200);
 
   pinMode(M1PIN1, OUTPUT);
@@ -111,7 +117,9 @@ void loop() {
   setMotor(direction[1], speed[1], PWM2, M2PIN1, M2PIN2);
   setMotor(direction[2], speed[2], PWM3, M3PIN1, M3PIN2);
   setMotor(direction[3], speed[3], PWM4, M4PIN1, M4PIN2);
+
   nh.spinOnce();
+
   delay(1);
   
 
