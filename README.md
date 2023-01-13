@@ -8,7 +8,7 @@ Repo for UTSA's R5 Robotics Comp Robot
 
 - [`agv.repos`](./agv.repos): VCS install of other required packages for AGV
 - [`agv_base`](./agv_base): Hardware drivers and MCU code
-- [`agv_bringup`](./agv_bringup): Bring up launch files and scripts
+- [`agv_bringup`](./agv_bringup): Launch files to bring up the hardware driver nodes (cameras, microcontroller, etc.) as well as the C++ nodes from the agv_base package for the real robot.
 - [`agv_control`](./agv_control): Package for PID control and control algorithms
 - [`agv_description`](./agv_description): URDF description of AGV including its sensors.
 - [`agv_metapkg`](./agv_metapkg): ROS metapkg convention for easy install of whole ROS stack
