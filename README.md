@@ -15,6 +15,6 @@ Repo for UTSA's R5 Robotics Comp Robot
 - [`agv_msgs`](./agv_msgs): Message definitions specific to AGV, for example the message for encoder data
 - [`agv_navigation`](./agv_navigation): Navigation package for implementationof ROS Nav stack
 
-- ['obj_identification']: Identification package of key competition objects (Boxes, box faces, gaffer tape on carpet, AGV, and AAV)
+- [`obj_identification`]: Identification package of key competition objects (Boxes, box faces, gaffer tape on carpet, AGV, and AAV)
 
 - [`misc`](./misc): Holds all previous repo files. Need to sort and clean...
