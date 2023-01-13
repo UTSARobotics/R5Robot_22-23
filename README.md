@@ -1,7 +1,7 @@
 Repo for UTSA's R5 Robotics Comp Robot
 ===
 
-## :package: Repo Overview
+## :package: Package Overview
 - [`aav.repos`](./aav.repos): VCS install of other required packages for AAV
 - [`aav_control`](./aav_control):  Package for control of tello drone
 - [`aav_description`](./aav_description): URDF description of AAV
@@ -14,5 +14,7 @@ Repo for UTSA's R5 Robotics Comp Robot
 - [`agv_metapkg`](./agv_metapkg): ROS metapkg convention for easy install of whole ROS stack
 - [`agv_msgs`](./agv_msgs): Message definitions specific to AGV, for example the message for encoder data
 - [`agv_navigation`](./agv_navigation): Navigation package for implementationof ROS Nav stack
+
+- ['obj_identification']: Identification package of key competition objects (Boxes, box faces, gaffer tape on carpet, AGV, and AAV)
 
 - [`misc`](./misc): Holds all previous repo files. Need to sort and clean...
