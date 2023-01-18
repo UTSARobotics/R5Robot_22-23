@@ -18,3 +18,9 @@ Repo for UTSA's R5 Robotics Comp Robot
 - [`obj_identification`](./obj_identification): Identification package of key competition objects (Boxes, box faces, gaffer tape on carpet, AGV, and AAV)
 - [`states_round1`](./states_round1): State code package for both AAV and AGV
 - [`misc`](./misc): Holds all previous repo files. Need to sort and clean...
+
+# Installation
+- cd to your workspace's src directory
+```
+git clone https://github.com/UTSARobotics/R5Robot_22-23.git
+```
