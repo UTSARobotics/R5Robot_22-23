@@ -1,7 +1,7 @@
 Repo for UTSA's R5 Robotics Comp Robot
 ===
 
-## :package: Package Overview
+# :package: Package Overview
 - [`aav.repos`](./aav.repos): VCS install of other required packages for AAV
 - [`aav_control`](./aav_control):  Package for control of tello drone
 - [`aav_description`](./aav_description): URDF description of AAV
