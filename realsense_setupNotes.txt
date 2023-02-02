@@ -1,0 +1,10 @@
+roslaunch realsense2_camera rs_camera.launch camera:=cam_1 serial_no:=923322070875 filters:=spatial,temporal,pointcloud
+
+roslaunch realsense2_camera rs_camera.launch camera:=cam_2 serial_no:=834412070125 filters:=spatial,temporal,pointcloud
+
+# Assuming distance of 50 CM along x axis
+rosrun agv_bringup set_cams_transforms.py jcCam_link alecCam_link 0.5 0.0 0 -180 0 0
+
+# Our SN
+serial_no_camera1:=923322070875
+serial_no_camera2:=834412070125

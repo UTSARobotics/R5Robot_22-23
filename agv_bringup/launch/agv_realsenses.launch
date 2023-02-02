@@ -1,0 +1,48 @@
+<launch>
+  <group ns="jcCam">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+      <arg name="serial_no"             value="923322070875"/>
+      <arg name="tf_prefix"             value="jcCam"/>
+      <arg name="initial_reset"         value="false"/>
+      <arg name="reconnect_timeout"     value="6.0"/>
+      <!-- color -->
+      <arg name="enable_color"          value="true"/>
+      <arg name="color_width"           value="640"/>
+      <arg name="color_height"          value="480"/>
+      <arg name="color_fps"             value="30"/>
+      <!-- depth -->
+      <arg name="enable_depth"          value="true"/>
+      <arg name="depth_width"           value="640"/>
+      <arg name="depth_height"          value="480"/>
+      <arg name="depth_fps"             value="30"/>
+      <!-- pointcloud -->
+      <arg name="filters"               value="spatial,temporal,pointcloud"/>
+    </include>
+  </group>
+
+  <group ns="alecCam">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+      <arg name="serial_no"             value="834412070125"/>
+      <arg name="tf_prefix"             value="alecCam"/>
+      <arg name="initial_reset"         value="false"/>
+      <arg name="reconnect_timeout"     value="6.0"/>
+      <!-- color -->
+      <arg name="enable_color"          value="true"/>
+      <arg name="color_width"           value="640"/>
+      <arg name="color_height"          value="480"/>
+      <arg name="color_fps"             value="30"/>
+      <!-- depth -->
+      <arg name="enable_depth"          value="true"/>
+      <arg name="depth_width"           value="640"/>
+      <arg name="depth_height"          value="480"/>
+      <arg name="depth_fps"             value="30"/>
+      <!-- pointcloud -->
+      <arg name="filters"               value="spatial,temporal,pointcloud"/>
+    </include>
+  </group>
+
+  <group>
+   <node pkg="agv_bringup" name="cam_link" type="fixFrame.py" args="jcCam_link alecCam_link 0.5 0.0 0 -180 0 0"/>
+  </group>
+
+</launch>
