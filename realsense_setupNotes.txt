@@ -8,3 +8,9 @@ rosrun agv_bringup set_cams_transforms.py jcCam_link alecCam_link 0.5 0.0 0 -180
 # Our SN
 serial_no_camera1:=923322070875
 serial_no_camera2:=834412070125
+
+
+# multiple cam
+roslaunch realsense2_camera rs_multiple_devices.launch serial_no_camera1:=923322070875 serial_no_camera2:=834412070125
+
+    

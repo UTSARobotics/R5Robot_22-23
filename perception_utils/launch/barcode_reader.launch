@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="front_camera" default="jcCam"/>
+    <arg name="rear_camera" default="alecCam"/>
+    <node pkg="nodelet" type="nodelet" name="zbar_manager"  args="manager"/>
+
+    <node pkg="zbar_ros" type="barcode_reader_node" name="jc_barcode_reader" respawn="True">
+        <param name="throttle_repeated_barcodes" type="double" value="2.0"/>
+        <remap from="image" to="/$(arg front_camera)/color/image_raw"/>
+	<remap from="barcode" to="$(arg front_camera)_barcode"/>
+    </node>
+    
+    <node pkg="zbar_ros" type="barcode_reader_node" name="alec_barcode_reader" respawn="True">
+        <param name="throttle_repeated_barcodes" type="double" value="2.0"/>
+        <remap from="image" to="/$(arg rear_camera)/color/image_raw"/>
+	<remap from="barcode" to="$(arg rear_camera)_barcode"/>
+    </node>
+
+    <node pkg="perception_utils" type="barcode_printer.py" name="$(arg front_camera)_barcode_printer" respawn="True" output="screen" >
+	  <param name="camera_name" value="$(arg front_camera)"/>
+	  <remap from="barcode" to="$(arg front_camera)_barcode"/>
+    </node>
+    <node pkg="perception_utils" type="barcode_printer.py" name="$(arg rear_camera)_barcode_printer" respawn="True" output="screen" >
+	  <param name="camera_name" value="$(arg rear_camera)"/>
+	  <remap from="barcode" to="$(arg rear_camera)_barcode"/>
+    </node>
+</launch>

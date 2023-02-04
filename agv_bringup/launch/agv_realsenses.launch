@@ -3,7 +3,7 @@
     <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
       <arg name="serial_no"             value="923322070875"/>
       <arg name="tf_prefix"             value="jcCam"/>
-      <arg name="initial_reset"         value="false"/>
+      <arg name="initial_reset"         value="true"/>
       <arg name="reconnect_timeout"     value="6.0"/>
       <!-- color -->
       <arg name="enable_color"          value="true"/>
@@ -24,7 +24,7 @@
     <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
       <arg name="serial_no"             value="834412070125"/>
       <arg name="tf_prefix"             value="alecCam"/>
-      <arg name="initial_reset"         value="false"/>
+      <arg name="initial_reset"         value="true"/>
       <arg name="reconnect_timeout"     value="6.0"/>
       <!-- color -->
       <arg name="enable_color"          value="true"/>
