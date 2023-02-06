@@ -1,0 +1,8 @@
+#goal
+bool qr_read
+---
+#result
+string qr_string
+---
+#feedback
+
