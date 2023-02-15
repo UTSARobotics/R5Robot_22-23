@@ -26,3 +26,17 @@ Repo for UTSA's R5 Robotics Comp Robot
 ```
 git clone https://github.com/UTSARobotics/R5Robot_22-23.git
 ```
+- Install some dependencies
+```
+sudo apt-get install -y \
+ros-noetic-roslint \
+ros-noetic-rosserial \
+ros-noetic-rosserial-arduino \
+ros-noetic-imu-filter-madgwick \
+ros-noetic-gmapping \
+ros-noetic-map-server \
+ros-noetic-navigation \
+ros-noetic-robot-localization \
+ros-noetic-tf2 \
+ros-noetic-tf2-ros
+```
